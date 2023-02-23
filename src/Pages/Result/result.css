@@ -1,0 +1,51 @@
+.dark{
+    background-color: #0a0a0a;
+    height: 100vh;
+}
+section{
+    background-color: var(--bg-color);
+    padding: 2rem 10rem;
+}
+.dark section{
+  background-color: #0a0a0a;
+}
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    background-color: var(--bg-color);
+    grid-gap: 3rem;
+    align-items: center;
+}
+.dark .card-wrapper{
+    background-color: #0a0a0a;
+}
+
+
+@media(width<=1024px){
+    section{
+        padding: 2rem 7rem;
+    }
+    .card-wrapper{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(width<=780px){
+    section{
+        padding: 2rem 4rem;
+    }
+    .card-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(width<=500px){
+    section{
+        padding: 2rem 3rem;
+    }
+    .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+

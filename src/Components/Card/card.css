@@ -1,0 +1,65 @@
+.card {
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  width: 95%;
+  height: auto;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.dark .card{
+  background-color: #0a0a0a;
+  box-shadow: 5px 5px 10px #171818, -5px -5px 10px #000000;
+}
+
+.card-title {
+  font-size: 2rem;
+  color: var(--color-green);
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.dark .card-title{
+  color: var(--color-blue);
+}
+
+.card-buttons {
+  margin: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.card-buttons .btn-country,
+.card-buttons  .btn-recipe a {
+  width: 8rem;
+  height: 2.5rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  color: var(--color-blue);
+  cursor: pointer;
+}
+
+.card-buttons  .btn-recipe a{
+  width: 12rem;
+}
+
+.dark .card-buttons .btn-country, .dark .card-buttons .btn-recipe a{
+  background-color: #0a0a0a;
+  box-shadow: 5px 5px 10px #171818, -5px -5px 10px #000000;
+  color: var(--color-green);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}

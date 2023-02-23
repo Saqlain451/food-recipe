@@ -1,0 +1,27 @@
+.search-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0rem 0rem 4rem 0rem;
+}
+
+.search-btns .btn{
+    width: 11rem;
+    height: 3.5rem;
+    box-shadow: var(--box-shadow);
+    font-size: 1.5rem;
+    color: var(--color-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.dark .search-btns .btn {
+    background-color: #0a0a0a;
+    box-shadow: 5px 5px 10px #171818, -5px -5px 10px #000000; 
+    color: var(--color-blue);
+}

@@ -9,13 +9,13 @@ const AppProvider = ({ children }) => {
     isDark ? setIsDark(false) : setIsDark(true);
   };
 
-
-  const titleChange = (str)=>{
-      return document.title=str;
-  }
+  const titleChange = (str) => {
+    return (document.title = str);
+  };
 
   const url = "https://www.themealdb.com/api/json/v1/1/search.php?";
   const [recipe, setRecipe] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [searchRecipe, setSearchRecipe] = useState(" ");
   const [recipeData, setRecipeData] = useState();
   const changeHandler = (e) => {
@@ -30,10 +30,12 @@ const AppProvider = ({ children }) => {
     try {
       const res = await fetch(api);
       const data = await res.json();
+      data ? setLoading(false) : setLoading(true);
       // console.log("🚀 ~ file: Context.jsx:17 ~ getAPidata ~ data:", data.meals);
       setRecipe(data.meals);
+     
     } catch (error) {
-      setRecipe("Data not found");
+      console.log(error);
     }
   };
 
@@ -57,7 +59,8 @@ const AppProvider = ({ children }) => {
         clickHandler,
         btnClick,
         searchRecipe,
-        titleChange
+        titleChange,
+        loading,
       }}
     >
       {children}

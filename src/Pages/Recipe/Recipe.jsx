@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import RecipeCard from "../../Components/RecipeCard/RecipeCard";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGlobalHooke } from "../../hooks/Context";
+import "./recipe.css";
+import Loader from "../../Components/Loader/Loader";
 const Recipe = () => {
-  const {titleChange} = useGlobalHooke();
+  const { titleChange } = useGlobalHooke();
   const { id } = useParams();
   const Navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+
   const [data, setData] = useState({
     img: "",
     title: "",
@@ -24,11 +28,11 @@ const Recipe = () => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?`;
 
   const getData = async (api) => {
-    
     const res = await fetch(api);
     const data = await res.json();
     console.log(data.meals);
     const meals = data.meals;
+    data ? setIsLoading(false) : setIsLoading(true);
     setData({
       img: meals[0].strMealThumb,
       title: meals[0].strMeal,
@@ -45,13 +49,15 @@ const Recipe = () => {
     });
   };
 
-  titleChange(data.title+" Recipe");
+  titleChange(data.title + " Recipe");
 
   useEffect(() => {
     getData(`${url}i=${id}`);
   }, [id]);
 
-  return (
+  return isLoading ? (
+    <Loader/>
+  ) : (
     <section>
       <RecipeCard
         img={data.img}

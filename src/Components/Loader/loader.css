@@ -1,0 +1,35 @@
+.loader-wrapper {
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dark .loader-wrapper{
+      background-color: #0a0a0a;
+  }
+  
+  .loader-wrapper .loader {
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 7px solid;
+    border-color: var(--color-green) transparent;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .dark .loader-wrapper   .loader {
+      border-color: var(--color-blue) transparent;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

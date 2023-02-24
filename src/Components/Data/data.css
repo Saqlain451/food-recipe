@@ -1,0 +1,15 @@
+.error{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+.dark .error{
+    background-color: #0a0a0a;;
+}
+.error p{
+    font-size: 3rem;
+    color: red;
+    text-transform: capitalize;
+}

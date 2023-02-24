@@ -41,9 +41,10 @@ It will also applicable for the recipe page. and recipe page look like this
 
 ### When food you search is unavailable on this app ...
 
-You will see a text "Search items is not found..."
+You will see a text "Search data is not found..."
 
-<img width="100%" alt="image" src="https://user-images.githubusercontent.com/77657627/220887939-d212c4e8-fa9a-43c7-b4fb-a82af3b5079f.png">
+<img width="100%" alt="image" src="https://user-images.githubusercontent.com/77657627/221151573-f9a20fd9-63f3-4745-97e4-694d8d6abb89.png">
+
 <br/>
 
 ## How to Run :

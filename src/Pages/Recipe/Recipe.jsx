@@ -56,7 +56,9 @@ const Recipe = () => {
   }, [id]);
 
   return isLoading ? (
+    <div className="res-loader">
     <Loader/>
+    </div>
   ) : (
     <section>
       <RecipeCard

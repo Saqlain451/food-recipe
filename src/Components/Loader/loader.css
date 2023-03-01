@@ -1,9 +1,18 @@
 .loader-wrapper {
-    height: 100vh;
+    height: 50vh;
     background-color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .res-loader .loader-wrapper {
+    height: 80vh;
+    background-color: var(--bg-color);
+  }
+
+  .dark .res-loader .loader-wrapper{
+    background-color: #0a0a0a;;
   }
   
   .dark .loader-wrapper{

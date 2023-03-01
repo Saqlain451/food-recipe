@@ -5,6 +5,7 @@ const appContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
+  
   const darkToggle = () => {
     isDark ? setIsDark(false) : setIsDark(true);
   };
@@ -28,6 +29,7 @@ const AppProvider = ({ children }) => {
 
   const getAPidata = async (api) => {
     try {
+      setLoading(true);
       const res = await fetch(api);
       const data = await res.json();
       data ? setLoading(false) : setLoading(true);

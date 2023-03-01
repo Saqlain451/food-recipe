@@ -5,10 +5,14 @@ import Loader from "../../Components/Loader/Loader";
 import "./result.css";
 import DataNotFound from "../../Components/Data/DataNotFound";
 const Result = () => {
+  
   const { recipe, titleChange, loading } = useGlobalHooke();
   titleChange("recipe");
+  
   return loading ? (
+    
     <Loader />
+    
   ) : Array.isArray(recipe) ? (
     <div className="card-wrapper">
       {recipe.map((element) => {

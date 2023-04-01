@@ -7,17 +7,17 @@ import Recipe from "./Pages/Recipe/Recipe";
 const App = () => {
   const { isDark } = useGlobalHooke();
   return (
-    <div className={isDark ? "dark" : ""}>
-      <Navbar />
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className={isDark ? "dark" : ""}>
+        <Navbar />
         <Routes>
-          <Route index element={<Home />}/>
+          <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="*" element={<Home />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 };
 

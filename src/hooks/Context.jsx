@@ -47,6 +47,17 @@ const AppProvider = ({ children }) => {
     setSearchRecipe(text);
   };
 
+  // for enter key
+  const enterClick = (e)=>{
+    // console.log(e.key);
+    if(e.key === "Enter"){
+      // console.log(searchRecipe);
+      // setRecipe(searchRecipe);
+      getAPidata(`${url}s=${searchRecipe}`);
+    }
+
+  }
+
   useEffect(() => {
     getAPidata(`${url}s=${searchRecipe}`);
   }, [recipeData]);
@@ -63,6 +74,7 @@ const AppProvider = ({ children }) => {
         searchRecipe,
         titleChange,
         loading,
+        enterClick
       }}
     >
       {children}

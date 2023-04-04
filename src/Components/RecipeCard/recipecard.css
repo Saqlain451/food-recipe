@@ -71,7 +71,15 @@
   box-shadow: 5px 5px 10px #171818, -5px -5px 10px #000000;
 }
 
-.btn-back {
+.recipe-btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.btn-back, .btn-show-video {
   width: 15rem;
   height: 4.5rem;
   background-color: #eaeaea;
@@ -80,15 +88,18 @@
   font-size: 1.6rem;
   text-transform: capitalize;
   color: var(--color-green);
-  display: block;
-  margin: auto;
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 1rem;
+  border-radius: 1rem;
+ 
 }
 
-.dark .btn-back{
+.btn-show-video a{
+  color: var(--color-green);
+}
+
+.dark .btn-back, .dark .btn-show-video{
   background-color: #0a0a0a;
   box-shadow: 5px 5px 10px #171818, -5px -5px 10px #000000;
 }

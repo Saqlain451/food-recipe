@@ -23,6 +23,7 @@ const Recipe = () => {
     ingridient8: "",
     ingridient9: "",
     text: "",
+    link:""
   });
 
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?`;
@@ -46,6 +47,7 @@ const Recipe = () => {
       ingridient8: meals[0].strIngredient8,
       ingridient9: meals[0].strIngredient9,
       text: meals[0].strInstructions,
+      link: meals[0].strYoutube,
     });
   };
 
@@ -74,6 +76,7 @@ const Recipe = () => {
         ingredient8={data.ingridient8}
         ingredient9={data.ingridient9}
         recipeText={data.text}
+        linkVideo = {data.link}
         backBtnclick={() => {
           Navigate(-1);
         }}

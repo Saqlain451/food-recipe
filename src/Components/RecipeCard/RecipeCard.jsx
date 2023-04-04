@@ -15,6 +15,7 @@ const RecipeCard = ({
   ingredient8,
   ingredient9,
   recipeText,
+  linkVideo,
 }) => {
   return (
     <div className="res">
@@ -43,9 +44,12 @@ const RecipeCard = ({
         <p className="recipe-text">
           {recipeText}
         </p>
+        <div className="recipe-btns">
         <button className="btn-back" onClick={backBtnclick}>
           go back
         </button>
+        <button className="btn-show-video"> <a href={linkVideo}> watch video </a> </button>
+        </div>
       </div>
     </div>
   );
